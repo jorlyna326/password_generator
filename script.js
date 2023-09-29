@@ -3,7 +3,7 @@ const upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "
 
 const lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
 
-const specCharacter = ["!", "#", "$", "%", "&", "*", "?", "@", "^" ];
+const specCharacter = ["!", "#", "$", "%", "&", "*", "?", "@", "^"];
 const number = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",];
 
 // Assignment Code
@@ -13,10 +13,18 @@ let pwObj = {};
 let pw = [];
 
 //prompts for password length (8-122) Alert if not valid
-//prompts for uppercase => PasswordArr
+var length = prompt("Please enter password length (8-122)");
+
+//check length between (8-122)
+if (length < 8) {
+  alert("Need more than 8 characters");
+}
+if (length > 8 && length < 122) {
+ //prompts for uppercase => PasswordArr
 //prompts for lowercase => PasswordArr
 //prompts for numbers => PasswordArr
-//prompts for symbol s=> PasswordArr
+//prompts for special char s=> PasswordArr
+}
 
 
 // Write password to the #password input
@@ -30,3 +38,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
